@@ -1,0 +1,35 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pynvim = "*"
+python-language-server = {extras = ["all"],version = "*"}
+pyls-isort = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-sugar = "*"
+pre-commit = "*"
+black = "*"
+
+[packages]
+fastapi = "*"
+gunicorn = "*"
+pydantic = "*"
+ujson = "*"
+uvicorn = "*"
+requests = "*"
+importlib-metadata = "*"
+asyncpg = "*"
+sqlalchemy = "*"
+databases = "*"
+python-dotenv = "*"
+colorlog = "*"
+httpx = "*"
+
+[requires]
+python_version = "3.8"
+
+[scripts]
+server = "uvicorn app.app:app --reload --log-config logger.conf --log-level debug --port 5000"
